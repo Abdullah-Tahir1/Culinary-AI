@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Seymour+One&display=swap");
+@import url("https://www.fontshare.com/fonts/telma");
+* a {
+  color: #ffffff;
+  text-decoration: none;
+}
+* a:link,
+* a:visited,
+* a:hover,
+* a:active {
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #222222;
+}
+
+.Pricing-1 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.Pricing-1 .heading {
+  font-family: "telma";
+  font-weight: 400;
+  font-style: italic;
+  font-weight: 900;
+}
+.Pricing-1 .heading span {
+  color: #e48a7d;
+}
+.Pricing-1 .sub-heading {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #616161;
+}
+
+.Pricing-2 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  /* Animations for smoother transitions */
+  /* Black for Free */
+  /* Pink for Freemium */
+  /* Blue for Premium */
+  /* CSS for the Pop-up */
+}
+.Pricing-2 .box-container {
+  width: 100%;
+  max-width: 1110px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 12px;
+}
+.Pricing-2 .type {
+  background-color: #282828;
+  box-shadow: 0 0 0 2px rgba(228, 138, 125, 0.8);
+  border-radius: 15px;
+  padding: 10% 15%;
+  text-align: center;
+}
+.Pricing-2 .type i {
+  color: #e48a7d;
+}
+.Pricing-2 .type p {
+  color: #616161;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.Pricing-2 .type h3 {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.Pricing-2 .type h3 span {
+  font-size: 16px;
+}
+.Pricing-2 .type ul {
+  text-align: left;
+  margin: 20px 10px;
+  list-style: none;
+}
+.Pricing-2 .type ul li {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.Pricing-2 .type ul li i {
+  margin-right: 10px;
+}
+.Pricing-2 .type .free-btn,
+.Pricing-2 .type .freemium-btn,
+.Pricing-2 .type .premium-btn {
+  margin-top: 1rem;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+  background-color: #131313;
+  color: #ffffff;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.Pricing-2 .type .free-btn:hover,
+.Pricing-2 .type .freemium-btn:hover,
+.Pricing-2 .type .premium-btn:hover {
+  background-color: #e48a7d;
+}
+.Pricing-2 .type .free-btn {
+  bottom: -10.9rem;
+}
+.Pricing-2 .type .freemium-btn {
+  bottom: -8.7rem;
+}
+.Pricing-2 .type .premium-btn {
+  bottom: -8px;
+}
+.Pricing-2 .type .premium-btn:hover {
+  background-color: #e48a7d;
+  transition: ease-in-out 0.2s;
+}
+.Pricing-2 .type:hover {
+  transition: ease-in-out 0.5s;
+  transform: scale(1.04);
+}
+.Pricing-2 .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.Pricing-2 .popup-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  max-width: 600px;
+  text-align: center;
+}
+.Pricing-2 .popup-content p {
+  color: black; /* Ensure text color contrasts with background */
+  font-size: 18px; /* Size the font for visibility */
+}
+.Pricing-2 .popup-content button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.Pricing-2 .popup-content button:hover {
+  background-color: #3d8b40; /* Darker on hover for feedback */
+}
+.Pricing-2 .show-popup {
+  display: flex;
+  opacity: 1;
+}
+.Pricing-2 .show-popup .popup-content {
+  transform: scale(1);
+  opacity: 1;
+}
+.Pricing-2 .plan-free {
+  color: #000;
+}
+.Pricing-2 .plan-freemium {
+  color: #e48a7d;
+}
+.Pricing-2 .plan-premium {
+  color: #7d87e4;
+}
+.Pricing-2 .newsletter-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.Pricing-2 .popup-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+.Pricing-2 .close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.Pricing-2 .close-button:hover,
+.Pricing-2 .close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.card-header,
+.card-body,
+.card-footer {
+  display: block;
+  width: 100%;
+}
+
+.button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 15px;
+  }
+  .card {
+    padding: 15px;
+  }
+  .button {
+    padding: 8px 16px;
+  }
+  .free-btn {
+    margin-bottom: 10.9rem;
+  }
+  .freemium-btn {
+    margin-bottom: 11.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+  .card {
+    display: flex;
+    margin: 20px;
+  }
+  .card-header,
+  .card-body,
+  .card-footer {
+    flex: 1;
+  }
+  .button {
+    width: auto;
+    padding: 15px 30px;
+  }
+  .free-btn {
+    margin-bottom: 5rem;
+  }
+  .freemium-btn {
+    margin-bottom: 7rem;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .card {
+    padding: 40px;
+  }
+  .button {
+    padding: 15px 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}/*# sourceMappingURL=pricing.css.map */

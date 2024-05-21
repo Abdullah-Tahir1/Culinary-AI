@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+@import url("https://www.fontshare.com/fonts/telma");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Seymour+One&display=swap");
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  background-color: #222222;
+}
+body main,
+body .side-image {
+  flex: 1;
+  width: 50%;
+}
+
+.side-image {
+  background-image: url("/Assests/Login-Background-2.png");
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+header div.logo {
+  background: #e48a7d;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 15.5px;
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  font-size: larger;
+  height: 2rem;
+  margin: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.content {
+  padding: 5rem;
+  color: #f5d6d2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.content h1 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.content h1 span {
+  color: #e48a7d;
+}
+.content .subheading {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 100;
+}
+.content form {
+  width: 100%;
+}
+.content form .form-group {
+  position: relative;
+  padding-top: 2rem;
+}
+.content form .form-group label {
+  position: absolute;
+  top: 70%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  color: #f5d6d2;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: transparent;
+}
+.content form .form-group input[type=email],
+.content form .form-group input[type=password],
+.content form .form-group input[type=tel] {
+  width: 96.5%;
+  padding: 0.8rem;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #f5d6d2;
+  color: #f5d6d2;
+  font-size: 1rem;
+}
+.content form .form-group input[type=email]:not(:-moz-placeholder-shown) + label, .content form .form-group input[type=password]:not(:-moz-placeholder-shown) + label, .content form .form-group input[type=tel]:not(:-moz-placeholder-shown) + label {
+  top: 53%;
+  left: 0.8rem;
+  color: #e48a7d;
+  transform: translateY(-100%);
+  font-size: 0.8rem;
+  background-color: #222222;
+  z-index: 1;
+  border: 2px solid #222222;
+  border-radius: 10px;
+}
+.content form .form-group input[type=email]:focus + label, .content form .form-group input[type=email]:not(:placeholder-shown) + label,
+.content form .form-group input[type=password]:focus + label,
+.content form .form-group input[type=password]:not(:placeholder-shown) + label,
+.content form .form-group input[type=tel]:focus + label,
+.content form .form-group input[type=tel]:not(:placeholder-shown) + label {
+  top: 53%;
+  left: 0.8rem;
+  color: #e48a7d;
+  transform: translateY(-100%);
+  font-size: 0.8rem;
+  background-color: #222222;
+  z-index: 1;
+  border: 2px solid #222222;
+  border-radius: 10px;
+}
+.content form .form-group input[type=email]:focus,
+.content form .form-group input[type=password]:focus,
+.content form .form-group input[type=tel]:focus {
+  outline: none;
+  background-color: #222222;
+}
+.content form .form-group input[type=email]::-moz-placeholder, .content form .form-group input[type=password]::-moz-placeholder, .content form .form-group input[type=tel]::-moz-placeholder {
+  color: transparent;
+}
+.content form .form-group input[type=email]::placeholder,
+.content form .form-group input[type=password]::placeholder,
+.content form .form-group input[type=tel]::placeholder {
+  color: transparent;
+}
+.content form .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.content form .links .checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.content form .links .checkbox input[type=checkbox] {
+  margin-right: 0.5rem;
+  background-color: #222222;
+  accent-color: #e48a7d;
+  border: #d9d9d9 solid 1px;
+}
+.content form .links label {
+  font-size: 0.9rem;
+}
+.content form .forgot-link {
+  margin-bottom: 2rem;
+}
+.content form .forgot-link a {
+  color: #e48a7d;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.content form .forgot-link a:hover {
+  text-decoration: underline;
+}
+.content button {
+  margin: 1rem;
+  margin-top: 1rem;
+  background: #e48a7d;
+  border: none;
+  padding: 1rem 2rem;
+  color: #222222;
+  border-radius: 20px;
+  font-weight: 100;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  border: #e48a7d 2px solid;
+}
+.content button:hover {
+  background: #222222;
+  color: #e48a7d;
+  border: #e48a7d 2px solid;
+}
+.content .sign-up-link {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.content .sign-up-link a {
+  color: #e48a7d;
+  text-decoration: none;
+}
+.content .sign-up-link a:hover {
+  text-decoration: underline;
+}
+.content .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2rem;
+}
+.content .social-links i {
+  font-size: 1.5rem;
+  border: #e48a7d 2px solid;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: #e48a7d;
+  transition: all ease-in-out 0.3s;
+  text-align: center;
+}
+.content .social-links i:hover {
+  transform: scale(1.3);
+  border: #e48a7d 2px solid;
+  background-color: #e48a7d;
+  color: #222222;
+}
+
+.form-group,
+.checkbox,
+.forgot-link {
+  transition: opacity 0.5s ease, visibility 0.5s;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+
+.form-group {
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  max-height: 200px;
+}
+
+.form-group.collapsed {
+  max-height: 0;
+  padding: 0 20px;
+}
+
+.content {
+  transition: opacity 0.5s ease;
+}
+
+.content.fading {
+  opacity: 0.5;
+}
+
+.side-image {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease; /* Smooth transition for opacity changes */
+}
+
+.side-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 1s ease; /* Transition for fading effect */
+}
+
+.side-image.show-before::before {
+  opacity: 1; /* Fully show the ::before pseudo-element */
+}
+
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+  main,
+  .side-image {
+    width: 50%;
+  }
+  .content {
+    padding: 2rem;
+    max-width: 500px;
+  }
+  .form-group input,
+  .form-group label {
+    font-size: 18px;
+  }
+  button,
+  .social-links i {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .content {
+    padding: 2rem;
+    justify-content: center;
+  }
+  .form-group {
+    max-width: 600px;
+  }
+  .form-group input,
+  .form-group label {
+    font-size: 20px;
+  }
+  button,
+  .social-links i {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .content h1 {
+    font-size: 1.5rem;
+  }
+  .social-links {
+    flex-direction: column;
+  }
+}
+@media (max-width: 769px) {
+  .content {
+    padding: 2rem;
+  }
+}/*# sourceMappingURL=signIn.css.map */

@@ -1,0 +1,195 @@
+@import url("https://www.fontshare.com/fonts/telma");
+* a {
+  color: #ffffff;
+  text-decoration: none;
+}
+* a:link,
+* a:visited,
+* a:hover,
+* a:active {
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #222222;
+}
+
+.container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-image: url("../Assests/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+.container h1 {
+  font-size: 8rem;
+  font-family: "telma";
+  font-weight: 400;
+  font-style: italic;
+}
+.container h1 span {
+  color: #e48a7d;
+  font-style: italic;
+}
+
+.recipe-2 {
+  padding: 20px;
+}
+.recipe-2 .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.recipe-2 .image-container .image {
+  position: relative;
+  width: calc(33.333% - 40px);
+  max-width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.recipe-2 .image-container .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.recipe-2 .image-container .image img:hover {
+  transform: scale(1.1);
+}
+.recipe-2 .image-container .image .image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.recipe-2 .image-container .image .image-info:hover {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+.recipe-2 .image-container .image .image-info h2 {
+  font-size: 1.2em;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.recipe-2 .image-container .image .image-info p {
+  font-size: 0.9em;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.recipe-2 .image-container .image .image-info button {
+  background: #e48a7d;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.recipe-2 .image-container .image .image-info button:hover {
+  background-color: #db6453;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .recipe-2 .image-container .image {
+    width: calc(50% - 20px);
+    height: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .recipe-2 .image-container .image {
+    width: calc(50% - 20px);
+    height: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .recipe-2 .image-container .image {
+    width: 90%;
+    height: 200px;
+  }
+}
+.meet-our-chef {
+  padding: 20px;
+}
+.meet-our-chef h1 {
+  color: #e48a7d;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.meet-our-chef .chef-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(34, 34, 34, 0.5);
+}
+.meet-our-chef .chef-container .chef-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.meet-our-chef .chef-container .chef-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.meet-our-chef .chef-container blockquote {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  padding: 0 1rem;
+}
+.meet-our-chef .chef-container:hover {
+  transition: ease-in-out 0.5s;
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .meet-our-chef .chef-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .meet-our-chef .chef-container .chef-image {
+    margin-bottom: 20px;
+  }
+  .meet-our-chef .chef-container blockquote {
+    padding: 0;
+  }
+}/*# sourceMappingURL=recipe.css.map */

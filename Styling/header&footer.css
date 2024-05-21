@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Seymour+One&display=swap");
+@import url("https://www.fontshare.com/fonts/telma");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #222222;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #e48a7d;
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+header div {
+  margin-top: 1rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav div.logo {
+  background: #e48a7d;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 15.5px;
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  font-size: larger;
+  height: 2rem;
+  margin-top: 0.3rem;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+header nav ul li {
+  padding-left: 2rem;
+  color: white;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  transition: color 0.3s ease;
+}
+header nav ul li:hover {
+  color: #e48a7d;
+}
+header div.login {
+  background: #e48a7d;
+  padding: 0.1rem 1.5rem;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 1rem;
+  color: #222222;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+header div.login i {
+  font-size: 1rem;
+  margin-right: 0.8rem;
+}
+header div.login:hover {
+  border: 1px solid #e48a7d;
+  color: #e48a7d;
+  background-color: #222222;
+  height: 2rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  header nav ul li {
+    padding: 0.5rem 0;
+  }
+  header .login {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  header div.logo,
+  .login {
+    font-size: medium;
+  }
+}
+@media (max-width: 320px) {
+  header {
+    margin: 0.5rem;
+  }
+  header div.logo,
+  header .login {
+    padding: 0.25rem 1rem;
+    font-size: small;
+  }
+  nav ul li {
+    padding-left: 1rem;
+  }
+}
+footer {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative;
+}
+footer .footer-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .footer-content .text {
+  min-width: 500px;
+  text-align: left;
+}
+footer .footer-content .text h2 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+footer .footer-content .text p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  min-width: 700px;
+  font-weight: 100;
+}
+footer .footer-content .text::before, footer .footer-content .text::after {
+  content: "";
+  background-color: #616161;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+footer .footer-content .text::before {
+  top: 0;
+}
+footer .footer-content .text::after {
+  bottom: 0;
+}
+footer .footer-content .subscribe-btn {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #e48a7d;
+  color: white;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+footer .footer-content .subscribe-btn:hover {
+  background-color: #db6453;
+}
+footer .lower-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 5rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+footer .lower-footer .social-media {
+  margin: 2rem 0;
+}
+footer .lower-footer .social-media a {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+footer .lower-footer .social-media a:hover {
+  color: #e48a7d;
+}
+footer .lower-footer .copyright {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  footer .footer-content .text {
+    min-width: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  footer .footer-content .text p {
+    min-width: 0;
+    font-size: 1.2rem;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-content .subscribe-btn {
+    margin-top: 2rem;
+  }
+}/*# sourceMappingURL=header&footer.css.map */

@@ -1,0 +1,277 @@
+$baby-pink: #f5d6d2;
+$pink: #e48a7d;
+$black: #222222;
+$white: #ffffff;
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Seymour+One&display=swap");
+
+@mixin logo-font {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@import url("https://www.fontshare.com/fonts/telma");
+
+@mixin main-font {
+  font-family: "telma";
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin secondary-font {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $black;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: $black;
+}
+html::-webkit-scrollbar-thumb {
+  background: $pink;
+  border-radius: 10px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  div {
+    margin-top: 1rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    div.logo {
+      background: $pink;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 15.5px;
+      @include logo-font();
+      color: $black;
+      font-size: larger;
+      height: 2rem;
+      margin-top: 0.3rem;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+
+      li {
+        padding-left: 2rem;
+        color: white;
+        @include secondary-font();
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+  }
+  div.login {
+    background: $pink;
+    padding: 0.1rem 1.5rem;
+    @include secondary-font();
+    border-radius: 1rem;
+    color: $black;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+    i {
+      font-size: 1rem;
+      margin-right: 0.8rem;
+    }
+
+    &:hover {
+      border: 1px solid $pink;
+      color: $pink;
+      background-color: $black;
+      height: 2rem;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  // Tablets and below
+  header {
+    flex-direction: column;
+    align-items: center;
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        li {
+          padding: 0.5rem 0; // Adjust padding for vertical layout
+        }
+      }
+    }
+
+    .login {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  // Mobile devices
+  header div.logo,
+  .login {
+    font-size: medium; // Smaller font size for small screens
+  }
+}
+
+@media (max-width: 320px) {
+  // Very small devices like iPhone 4
+  header {
+    margin: 0.5rem;
+
+    div.logo,
+    .login {
+      padding: 0.25rem 1rem;
+      font-size: small; // Further reduce font size for very small screens
+    }
+  }
+
+  nav ul li {
+    padding-left: 1rem; // Reduce padding for list items
+  }
+}
+//////////////// Footer  //////////////////////////////////
+footer {
+  background-color: $black;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative;
+
+  .footer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .text {
+      min-width: 500px;
+      text-align: left;
+      h2 {
+        @include secondary-font();
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        @include secondary-font;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        min-width: 700px;
+        font-weight: 100;
+      }
+      &::before,
+      &::after {
+        content: "";
+        background-color: #616161;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    .subscribe-btn {
+      @include secondary-font;
+      background-color: $pink;
+      color: white;
+      padding: 0.7rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($pink, 10%);
+      }
+    }
+  }
+  .lower-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 5rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+
+    .social-media {
+      margin: 2rem 0;
+
+      a {
+        @include secondary-font;
+        color: white;
+        text-decoration: none;
+        margin: 0 0.5rem;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+
+    .copyright {
+      @include secondary-font;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  footer .footer-content .text {
+    min-width: 0; // Remove min-width for smaller screens
+    max-width: 600px; // Set max-width to maintain padding
+    margin: 0 auto; // Center the text block
+
+    p {
+      min-width: 0; // Ensure paragraph doesn't force layout width
+      font-size: 1.2rem; // Smaller font size for compact display
+    }
+  }
+
+  footer .footer-content {
+    flex-direction: column; // Stack elements vertically
+    align-items: center;
+
+    .subscribe-btn {
+      margin-top: 2rem; // Add space between text and button
+    }
+  }
+}

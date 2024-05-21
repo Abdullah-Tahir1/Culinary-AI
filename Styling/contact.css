@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+@import url("https://www.fontshare.com/fonts/telma");
+* a {
+  color: white;
+  text-decoration: none;
+}
+* a:link,
+* a:visited,
+* a:hover,
+* a:active {
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #222222;
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.contact-form-container .contact-heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: "telma";
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+}
+.contact-form-container .contact-heading span {
+  color: #e48a7d;
+}
+.contact-form-container .contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.contact-form-container .contact-form .form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.contact-form-container .contact-form .form-group label {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.8rem;
+  transform: translateY(0%);
+  color: #f5d6d2;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: transparent;
+}
+.contact-form-container .contact-form .form-group input[type=text],
+.contact-form-container .contact-form .form-group input[type=email],
+.contact-form-container .contact-form .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  background: transparent;
+  border: 1px solid #f5d6d2;
+  border-radius: 5px;
+  color: #f5d6d2;
+  font-size: 1rem;
+}
+.contact-form-container .contact-form .form-group input[type=text]:not(:-moz-placeholder-shown), .contact-form-container .contact-form .form-group input[type=email]:not(:-moz-placeholder-shown), .contact-form-container .contact-form .form-group textarea:not(:-moz-placeholder-shown) {
+  border-bottom: 2px solid #e48a7d;
+}
+.contact-form-container .contact-form .form-group input[type=text]:focus, .contact-form-container .contact-form .form-group input[type=text]:not(:placeholder-shown),
+.contact-form-container .contact-form .form-group input[type=email]:focus,
+.contact-form-container .contact-form .form-group input[type=email]:not(:placeholder-shown),
+.contact-form-container .contact-form .form-group textarea:focus,
+.contact-form-container .contact-form .form-group textarea:not(:placeholder-shown) {
+  border-bottom: 2px solid #e48a7d;
+}
+.contact-form-container .contact-form .form-group input[type=text]:not(:-moz-placeholder-shown) + label, .contact-form-container .contact-form .form-group input[type=email]:not(:-moz-placeholder-shown) + label, .contact-form-container .contact-form .form-group textarea:not(:-moz-placeholder-shown) + label {
+  top: 0px;
+  left: 0rem;
+  color: #e48a7d;
+  font-size: 0.8rem;
+  background-color: #222222;
+  padding: 0 5px;
+  border-radius: 5px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.contact-form-container .contact-form .form-group input[type=text]:focus + label, .contact-form-container .contact-form .form-group input[type=text]:not(:placeholder-shown) + label,
+.contact-form-container .contact-form .form-group input[type=email]:focus + label,
+.contact-form-container .contact-form .form-group input[type=email]:not(:placeholder-shown) + label,
+.contact-form-container .contact-form .form-group textarea:focus + label,
+.contact-form-container .contact-form .form-group textarea:not(:placeholder-shown) + label {
+  top: 0px;
+  left: 0rem;
+  color: #e48a7d;
+  font-size: 0.8rem;
+  background-color: #222222;
+  padding: 0 5px;
+  border-radius: 5px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.contact-form-container .contact-form .form-group input[type=text]:focus,
+.contact-form-container .contact-form .form-group input[type=email]:focus,
+.contact-form-container .contact-form .form-group textarea:focus {
+  outline: none;
+}
+.contact-form-container .contact-form .form-group input[type=text]::-moz-placeholder, .contact-form-container .contact-form .form-group input[type=email]::-moz-placeholder, .contact-form-container .contact-form .form-group textarea::-moz-placeholder {
+  color: transparent;
+}
+.contact-form-container .contact-form .form-group input[type=text]::placeholder,
+.contact-form-container .contact-form .form-group input[type=email]::placeholder,
+.contact-form-container .contact-form .form-group textarea::placeholder {
+  color: transparent;
+}
+.contact-form-container .contact-form .form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.contact-form-container .contact-form .send-btn {
+  background-color: #e48a7d;
+  border: none;
+  padding: 1rem 16.5rem;
+  color: #222222;
+  border-radius: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form-container .contact-form .send-btn:hover {
+  background-color: #db6453;
+}/*# sourceMappingURL=contact.css.map */

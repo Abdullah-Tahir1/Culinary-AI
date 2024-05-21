@@ -1,0 +1,672 @@
+$baby-pink: #f5d6d2;
+$pink: #e48a7d;
+$black: #222222;
+$white: #ffff;
+
+* {
+  //border: 2px dotted red;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $white;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Seymour+One&display=swap");
+
+@mixin main-font {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin secondary-font {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin heading-font {
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $black;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  div {
+    margin-top: 1rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    div.logo {
+      background: $pink;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 15.5px;
+      @include main-font();
+      color: $black;
+      font-size: larger;
+      height: 2rem;
+      margin-top: 0.3rem;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+
+      li {
+        a {
+          padding-left: 2rem;
+          color: white;
+          @include secondary-font();
+          transition: color 0.3s ease;
+          text-decoration: none;
+
+          &:hover {
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+  div.login {
+    background: $pink;
+    padding: 0.1rem 1.5rem;
+    @include secondary-font();
+    border-radius: 1rem;
+    color: $black;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      border: 1px solid $pink;
+      color: $pink;
+      background-color: $black;
+      height: 2rem;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+
+  .content-container {
+    max-width: 800px; // Set a max-width for the content for better readability
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      @include heading-font();
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      max-width: 900px;
+      width: 100%;
+      span {
+        color: $pink;
+      }
+    }
+
+    .subheading {
+      @include secondary-font();
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      width: 100%;
+      font-weight: normal;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+
+      input[type="text"] {
+        @include secondary-font();
+        font-weight: 100; // This will make the font thinner, adjust the number as needed
+        padding: 1rem;
+        margin-right: 0.5rem;
+        border: 1px solid #616161;
+        border-radius: 0.7rem;
+        background-color: #2a2a2a;
+        color: #f2f2f2;
+        font-size: 1rem;
+        width: 300px; // This will make the input field full width within its container
+
+        &::placeholder {
+          color: lighten(
+            #f2f2f2,
+            20%
+          ); // Make placeholder slightly lighter than the text color
+        }
+      }
+
+      .generate-btn {
+        @include secondary-font();
+        background-color: $pink;
+        border: none;
+        padding: 0.5rem 2rem;
+        border-radius: 0.7rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: 100;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($pink, 10%);
+        }
+      }
+    }
+
+    .examples {
+      @include secondary-font();
+      font-size: 0.9rem;
+      font-weight: 100;
+      color: #ababab;
+    }
+  }
+}
+
+.recipe-generator {
+  text-align: center;
+  padding: 2rem;
+  h2.section-heading {
+    @include heading-font();
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  .recipe-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .card {
+      width: calc(25% - 1rem); // subtract the gap size
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+      }
+      .label {
+        @include secondary-font();
+        color: white;
+        margin-top: 0.5rem;
+        font-size: 2rem;
+        text-align: left;
+        font-weight: normal;
+      }
+    }
+  }
+  .generate-btn {
+    @include secondary-font();
+    margin-top: 2rem;
+    background-color: $pink;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.7rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 100;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($pink, 10%);
+    }
+  }
+}
+
+// "How does it work?" section
+.work-steps {
+  display: flex;
+  justify-content: space-around; // For even spacing
+  flex-wrap: wrap; // Allow the items to wrap on smaller screens
+  padding: 2rem;
+  gap: 2rem;
+
+  .step-card {
+    background-color: #2a2a2a;
+    border: 1px solid #616161;
+    border-radius: 10px;
+    padding: 1rem;
+    flex-basis: calc(33.333% - 4rem); // 3 cards in a row minus the gap
+    display: flex; // Set display to flex for internal alignment
+    flex-direction: column; // Stack the internal items vertically
+    height: 100%; // Make card heights equal
+    min-height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.5rem;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      z-index: 1; // Set a z-index to lift the card above others
+    }
+
+    h3 {
+      @include secondary-font();
+      color: $pink;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    p {
+      @include secondary-font;
+      color: lighten(white, 20%);
+      font-weight: 300;
+    }
+  }
+}
+
+.who-we-are {
+  text-align: center;
+  padding: 4rem;
+  color: white;
+
+  h2 {
+    @include heading-font;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    @include secondary-font;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  p:last-child {
+    color: $pink;
+  }
+}
+
+footer {
+  background-color: $black;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative;
+
+  .footer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .text {
+      min-width: 500px;
+      text-align: left;
+      h2 {
+        @include secondary-font();
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        @include secondary-font;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        min-width: 700px;
+        font-weight: 100;
+      }
+      &::before,
+      &::after {
+        content: "";
+        background-color: #616161;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    .subscribe-btn {
+      @include secondary-font;
+      background-color: $pink;
+      color: white;
+      padding: 0.7rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($pink, 10%);
+      }
+    }
+  }
+  .lower-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 5rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+
+    .social-media {
+      margin: 2rem 0;
+
+      a {
+        @include secondary-font;
+        color: white;
+        text-decoration: none;
+        margin: 0 0.5rem;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+
+    .copyright {
+      @include secondary-font;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  footer .footer-content .text {
+    min-width: 0; // Remove min-width for smaller screens
+    max-width: 600px; // Set max-width to maintain padding
+    margin: 0 auto; // Center the text block
+
+    p {
+      min-width: 0; // Ensure paragraph doesn't force layout width
+      font-size: 1.2rem; // Smaller font size for compact display
+    }
+  }
+
+  footer .footer-content {
+    flex-direction: column; // Stack elements vertically
+    align-items: center;
+
+    .subscribe-btn {
+      margin-top: 2rem; // Add space between text and button
+    }
+  }
+}
+
+@media ((max-width: 768px) and (min-width: 601px)) {
+  header,
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  login {
+    margin-top: 1rem;
+  }
+
+  .main .content-container h1 {
+    font-size: 3rem; // Adjust heading size for tablets
+  }
+
+  .main .content-container .subheading {
+    font-size: 1.2rem; // Adjust subheading size for tablets
+  }
+
+  .recipe-generator .section-heading {
+    font-size: 2.5rem; // Adjust recipe generator heading size for tablets
+  }
+
+  .recipe-generator .recipe-cards .card {
+    width: calc(50% - 1rem); // 2 columns layout for recipe cards
+  }
+
+  .recipe-generator .generate-btn {
+    font-size: 1.2rem; // Smaller button text for tablets
+    padding: 0.8rem 1.6rem; // Adjust padding for tablets
+  }
+  // Adjustments for tablets (portrait orientation)
+  .work-steps .step-card {
+    width: 48%; // Adjust width for small tablets
+  }
+  .who-we-are h2 {
+    font-size: 2.5rem;
+  }
+
+  .who-we-are p {
+    font-size: 1.2rem;
+  }
+  footer .lower-footer {
+    flex-direction: column; // Stack copyright and social media vertically
+    align-items: center;
+    margin: 2rem 1rem;
+
+    .social-media {
+      order: -1; // Move social media above the copyright on small screens
+      margin-bottom: 1rem; // Add space below social media
+    }
+  }
+}
+
+@media ((max-width: 600px) and (min-width: 501px)) {
+  header div.logo,
+  .login {
+    font-size: small; // Smaller font size for small screens
+  }
+  header nav ul li {
+    padding-left: 1rem;
+  }
+  .recipe-generator .recipe-cards .card .label {
+    font-size: 1rem;
+  }
+  // Adjustments for mobile devices
+  .work-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-steps .step-card {
+    width: 80%; // Adjust width for mobile devices
+    margin-bottom: 1rem; // Add space between cards
+
+    p {
+      font-size: 0.5rem;
+    }
+  }
+  .who-we-are {
+    padding: 2rem;
+  }
+
+  .who-we-are h2 {
+    font-size: 2rem;
+  }
+
+  .who-we-are p {
+    font-size: 1rem;
+  }
+  footer .footer-content {
+    .text {
+      max-width: 100%; // Allow text to fill the width on very small screens
+      &::after {
+        bottom: -1rem;
+      }
+    }
+  }
+
+  footer .lower-footer {
+    margin: 1rem;
+    font-size: 1rem; // Reduce font size for smaller screens
+  }
+}
+
+@media ((max-width: 500px) and (min-width: 321px)) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5rem;
+  }
+  main .content-container {
+    h1 {
+      font-size: 2.5rem; // Smaller heading for mobile
+      max-width: 300px;
+    }
+
+    .subheading {
+      font-size: 1rem; // Standard font size for inputs and buttons on mobile
+      max-width: 300px;
+    }
+    .input-group input[type="text"] {
+      font-size: 0.7rem;
+      width: 150px;
+    }
+    .examples {
+      font-size: 0.8rem; // Smaller example text for small screens
+    }
+  }
+  .recipe-generator .section-heading {
+    font-size: 2rem; // Smaller heading for recipe generator on mobile
+  }
+
+  .recipe-generator .recipe-cards {
+    flex-direction: column; // Stack cards on mobile screens
+    align-items: center;
+  }
+
+  .recipe-generator .recipe-cards .card {
+    width: 90%; // Full width for cards on mobile
+  }
+
+  .recipe-generator .generate-btn {
+    width: 90%; // Full width for button on mobile
+    font-size: 1rem; // Smaller button text for mobile
+    padding: 0.8rem 1.6rem; // Adjust padding for mobile
+  }
+  footer .footer-content {
+    .text::after {
+      bottom: -1rem;
+    }
+    .text h2,
+    .text p {
+      font-size: 1rem; // Smaller font size for very small screens
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  // Very small devices like iPhone 4
+  header {
+    margin: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+
+    div.logo,
+    .login {
+      padding: 0.25rem 1rem;
+      font-size: small; // Further reduce font size for very small screens
+    }
+  }
+
+  header nav ul li {
+    padding-left: 0.8rem; // Reduce padding for list items
+  }
+
+  main .content-container {
+    h1 {
+      font-size: 2rem; // Smaller heading for very small devices
+      max-width: 150px;
+    }
+
+    .subheading {
+      font-size: 0.9rem; // Smaller subheading for consistency
+      max-width: 250px;
+    }
+
+    .input-group input[type="text"] {
+      margin-left: 3rem;
+    }
+
+    .input-group {
+      input[type="text"],
+      .generate-btn {
+        font-size: 0.7rem; // Smaller font size for inputs and buttons
+        width: 150px;
+      }
+    }
+    .examples {
+      max-width: 250px;
+    }
+  }
+
+  .recipe-generator .recipe-cards {
+    flex-direction: column; // Stack cards on mobile screens
+    align-items: center;
+  }
+
+  .recipe-generator .recipe-cards .card {
+    width: 90%; // Full width for cards on mobile
+  }
+
+  .recipe-generator .section-heading {
+    font-size: 1.5rem; // Even smaller heading for recipe generator on very small devices
+  }
+
+  .recipe-generator .generate-btn {
+    font-size: 0.8rem; // Smaller button text for very small devices
+  }
+
+  // Adjustments for very small devices
+  .work-steps .step-card {
+    width: 90%; // Adjust width for very small devices
+  }
+  .who-we-are h2 {
+    font-size: 1.5rem;
+  }
+
+  .who-we-are p {
+    font-size: 0.9rem;
+  }
+  footer .footer-content .text::after {
+    bottom: -1rem;
+  }
+  footer .lower-footer {
+    margin: 0rem 1rem;
+  }
+}

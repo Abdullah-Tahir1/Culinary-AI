@@ -1,0 +1,151 @@
+$baby-pink: #f5d6d2;
+$pink: #e48a7d;
+$black: #222222;
+$white: #ffff;
+
+* {
+  //border: 2px dotted red;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: $white;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+
+@import url("https://www.fontshare.com/fonts/telma");
+
+@mixin main-font {
+  font-family: "telma";
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin secondary-font {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin heading-font {
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $black;
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+
+  .contact-heading {
+    font-size: 3rem; // Adjust size as necessary
+    margin-bottom: 2rem;
+    @include main-font();
+    color: white;
+
+    span {
+      color: $pink;
+    }
+  }
+
+  .contact-form {
+    width: 100%; // Full width on smaller screens, consider setting a max-width
+    max-width: 500px; // Example max-width for larger screens
+    margin: 0 auto; // Center the form on the page
+    padding: 2rem; // Padding around the form
+
+    .form-group {
+      position: relative;
+      margin-bottom: 2rem; // Space between form groups
+
+      label {
+        position: absolute;
+        top: 0.9rem;
+        left: 0.8rem;
+        transform: translateY(0%); // Label starts at the top
+        color: $baby-pink;
+        transition: all 0.3s ease;
+        pointer-events: none;
+        background-color: transparent;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: none;
+        background: transparent;
+        border: 1px solid $baby-pink;
+        border-radius: 5px;
+        color: $baby-pink;
+        font-size: 1rem;
+
+        &:focus,
+        &:not(:placeholder-shown) {
+          border-bottom: 2px solid $pink; // Highlight border on focus or when text is entered
+        }
+
+        &:focus + label,
+        &:not(:placeholder-shown) + label {
+          top: 0px; // Move label above the input
+          left: 0rem;
+          color: $pink; // Label color changes to pink
+          font-size: 0.8rem; // Label shrinks in size
+          background-color: $black; // Background to cover the underlying content
+          padding: 0 5px; // Padding to ensure background covers the text
+          border-radius: 5px; // Rounded corners for background
+          transform: translateY(
+            -50%
+          ); // Adjust to align with the top of the input
+          z-index: 10;
+        }
+
+        &:focus {
+          outline: none; // Removes the outline on focus for cleaner style
+        }
+
+        &::placeholder {
+          color: transparent; // Hide placeholder when label is in place
+        }
+      }
+
+      textarea {
+        min-height: 150px; // Minimum height for the textarea
+        resize: vertical; // Allows the user to resize vertically
+      }
+    }
+
+    .send-btn {
+      background-color: $pink;
+      border: none;
+      padding: 1rem 16.5rem;
+      color: $black;
+      border-radius: 20px;
+      width: 100%; // Button width matches the form width
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($pink, 10%); // Button darkens on hover
+      }
+    }
+  }
+}
