@@ -1,6 +1,6 @@
 <?php 
-include "connect.php";  // Include the database connection settings
-include 'register.php'; // Include the registration and login handling script
+include "connect.html";  // Include the database connection settings
+include 'register.html'; // Include the registration and login handling script
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@ include 'register.php'; // Include the registration and login handling script
       <h1>Welcome to <span>Culinary AI</span></h1>
       <p class="subheading">Login to your account</p>
 
-      <form method="POST" action="SignIN.php" id="signup" style="display: none;">
+      <form method="POST" action="SignIN.html" id="signup" style="display: none;">
         <h1><span>Sign Up</span></h1>
         <div class="form-group">
           <input type="email" name="email" placeholder="Email" required />
@@ -43,7 +43,7 @@ include 'register.php'; // Include the registration and login handling script
         <button type="button" onclick="showSignIn()">Already registered? Sign In</button>
       </form>
 
-      <form method="POST" action="SignIN.php" id="signin">
+      <form method="POST" action="SignIN.html" id="signin">
         <h1><span>Sign In</span></h1>
         <div class="form-group">
           <input type="email" name="email" placeholder="Email" required />
@@ -60,7 +60,7 @@ include 'register.php'; // Include the registration and login handling script
 
 
       <div class="social-links">
-        <a href="google-oauth.php"><i class="fa-brands fa-google"></i></a>
+        <a href="google-oauth.html"><i class="fa-brands fa-google"></i></a>
       </div>
     </div>
 

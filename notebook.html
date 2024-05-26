@@ -14,16 +14,16 @@
 <body>
   <header>
     <nav>
-      <div class="logo"><a href="index.php">CI</a></div>
+      <div class="logo"><a href="index.html">CI</a></div>
       <ul>
-        <li><a href="AI gen.php">AI Generator</a></li>
-        <li><a href="Pricing.php">Pricing</a></li>
-        <li><a href="notebook.php">NoteBook</a></li>
-        <li><a href="recipe.php">Recipes</a></li>
+        <li><a href="AI gen.html">AI Generator</a></li>
+        <li><a href="Pricing.html">Pricing</a></li>
+        <li><a href="notebook.html">NoteBook</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
       </ul>
     </nav>
     <div class="login">
-      <a href="contact.php">Contact Us</a>
+      <a href="contact.html">Contact Us</a>
     </div>
   </header>
   <!--------------------- Title Code ------------------------------------------------>
@@ -32,7 +32,7 @@
   </div>
   <!--------------------- Form Code ------------------------------------------------>
   <?php 
-    include "connect.php";
+    include "connect.html";
     if(isset($_POST["submit"])){
       $title=$_POST["title"];
       $desc=$_POST["desc"];
@@ -78,7 +78,7 @@
                 <div class="card-body">
                   <h5 class="card-title">'.$fetch["title"].'</h5>
                   <p class="card-text">'.$fetch["description"].'</p>
-                  <a href="./delete.php?id='.$fetch["sno"].'" class="delete-btn">Delete</a>
+                  <a href="./delete.html?id='.$fetch["sno"].'" class="delete-btn">Delete</a>
                 </div>
               </div>';
       }

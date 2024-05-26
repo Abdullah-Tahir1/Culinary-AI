@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "connect.html";
 
 session_start();
 
@@ -17,16 +17,16 @@ if (isset($_POST['signUp'])) {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        header("Location: index.php?error=email_exists");  // Adjust if necessary
+        header("Location: index.html?error=email_exists");  // Adjust if necessary
     } else {
         $insert = $conn->prepare("INSERT INTO users (email, pnum, password) VALUES (?, ?, ?)");
         $insert->bind_param("sss", $email, $phone, $password);
         if ($insert->execute()) {
             $_SESSION['email'] = $email; // Set session variable
-            header("Location: index.php"); // Redirect to main page
+            header("Location: index.html"); // Redirect to main page
             exit;
         } else {
-            header("Location: SignIN.php?error=signup_failed");
+            header("Location: SignIN.html?error=signup_failed");
             exit;
         }
     }
@@ -48,12 +48,12 @@ $password = md5($password); // Hashing the password using MD5 algorithm
         $row = $result->fetch_assoc();
         $_SESSION['id'] = $row['id']; // Storing user's id in session variable
         $_SESSION['user_id'] = $row['id']; // Storing user's ID in session variable
-        header("Location: index.php"); // Redirecting user to the homepage after successful sign-in
+        header("Location: index.html"); // Redirecting user to the homepage after successful sign-in
         exit(); // Exiting the script    
     } 
     else {
         // Redirect back to the sign-in page with an error message
-        header("Location: SignIN.php?error=invalid_password");
+        header("Location: SignIN.html?error=invalid_password");
         exit;
     }
 }

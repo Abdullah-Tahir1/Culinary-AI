@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "connect.html";
 
 // Check if 'id' GET parameter is set
 if (isset($_GET["id"])) {
@@ -18,7 +18,7 @@ if (isset($_GET["id"])) {
     // Execute the prepared statement
     if ($stmt->execute()) {
         // Redirect if the deletion is successful
-        header("Location: notebook.php");
+        header("Location: notebook.html");
         exit; // Don't forget to call exit after header redirection
     } else {
         // Print error message if the execution failed

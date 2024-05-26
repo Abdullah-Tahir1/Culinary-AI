@@ -2,12 +2,12 @@
 // Initialize the session
 session_start();
 
-include "../connect.php"; // Include your database connection file
+include "../connect.html"; // Include your database connection file
 
 // Update the following variables with your Google OAuth credentials
 $google_oauth_client_id = '942984818561-6g93t593dragr5h568q4vj176uvo7eji.apps.googleusercontent.com';
 $google_oauth_client_secret = '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';
-$google_oauth_redirect_uri = 'http://localhost/website/index.php'; //add ur URI
+$google_oauth_redirect_uri = 'http://localhost/website/index.html'; //add ur URI
 $google_oauth_version = 'v3';
 
 // If the user is not already logged in via Google and the code parameter is present
@@ -50,7 +50,7 @@ if (!isset($_SESSION['google_loggedin']) && isset($_GET['code']) && !empty($_GET
             $_SESSION['google_loggedin'] = TRUE;
             $_SESSION['google_email'] = $profile['email'];
             // Redirect to profile page or perform any other action
-            header('Location:index.php'); //change to ur file where u want to direct it
+            header('Location:index.html'); //change to ur file where u want to direct it
             exit;
         } else {
             exit('Could not retrieve profile information! Please try again later!');
