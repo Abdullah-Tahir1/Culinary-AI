@@ -162,7 +162,7 @@ header div.logo {
 .content form .forgot-link a:hover {
   text-decoration: underline;
 }
-.content a button {
+.content button {
   margin: 1rem;
   margin-top: 1rem;
   background: #e48a7d;
@@ -180,7 +180,7 @@ header div.logo {
   width: 100%;
   border: #e48a7d 2px solid;
 }
-.content a button:hover {
+.content button:hover {
   background: #222222;
   color: #e48a7d;
   border: #e48a7d 2px solid;
@@ -294,7 +294,7 @@ header div.logo {
   .form-group label {
     font-size: 18px;
   }
-  a button,
+  button,
   .social-links i {
     font-size: 16px;
     padding: 15px;
@@ -312,7 +312,7 @@ header div.logo {
   .form-group label {
     font-size: 20px;
   }
-  a button,
+  button,
   .social-links i {
     font-size: 18px;
     padding: 20px;
